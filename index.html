@@ -29,48 +29,32 @@
 
   <body>
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light fixed-top"
-      style="background-color: #2d3e50"
-    >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-danger">
       <div class="container">
-        <a class="navbar-brand text-white" href="#">Imani Jaya Teknindo</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#home">Beranda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#about">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#services">Layanan Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#advantages">Keunggulan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#partners">Partners</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#contact">Kontak</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fs-5 fw-bold">
+            <a class="nav-link" aria-current="page" href="#dashboard">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#resume">Resume</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
         </div>
       </div>
     </nav>
 
+    <!-- Home Section -->
     <!-- Home Section -->
     <section
       id="home"
@@ -81,6 +65,7 @@
         padding: 100px 0;
         color: white;
         position: relative;
+        height: 100vh; /* Menambahkan tinggi penuh layar */
       "
     >
       <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">

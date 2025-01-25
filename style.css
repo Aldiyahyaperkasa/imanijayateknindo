@@ -1,4 +1,7 @@
-/* Navbar Style */
+* {
+  outline: 1px solid red; /* Menambahkan outline merah pada setiap elemen */
+}
+
 /* Navbar Style */
 .navbar {
   background-color: #2d3e50; /* Dark blue-gray */
@@ -19,6 +22,7 @@
 
 /* Home Section */
 #home {
+  padding: 100%;
   height: 100vh;
   background-size: cover;
   color: white;
