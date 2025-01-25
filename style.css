@@ -1,0 +1,216 @@
+/* Reset padding dan margin pada body */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Pastikan body tidak ada scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Untuk elemen utama yang perlu menyesuaikan lebar */
+.container,
+.content {
+  width: 100%;
+  max-width: 100%; /* Pastikan tidak lebih besar dari layar */
+}
+
+/* Responsif untuk ukuran layar kecil */
+@media (max-width: 768px) {
+  .container,
+  .content {
+    padding: 15px; /* Atur padding agar tidak terlalu besar */
+  }
+}
+
+/* Pastikan elemen tidak meluas di luar layar */
+img,
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Pastikan elemen flex atau grid menyesuaikan ukuran */
+.flex-container,
+.grid-container {
+  display: flex; /* atau grid jika menggunakan grid */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Navbar Style */
+.navbar {
+  background-color: #2d3e50; /* Dark blue-gray */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #f0ad4e; /* Change hover color to a golden shade */
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #f0ad4e; /* Active link color */
+}
+
+/* Home Section */
+#home {
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+}
+
+#home h1 {
+  font-size: 3rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+.cartoon-animation {
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+}
+
+/* About Section */
+#about {
+  padding-top: 100px;
+}
+
+#about img {
+  width: 80%; /* Mengatur ukuran logo agar lebih besar */
+  border-radius: 10px;
+}
+
+#about .col-md-8 h1 {
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+}
+
+#about h2 {
+  font-size: 1rem; /* Meningkatkan ukuran font sedikit */
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 10px;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+}
+
+/* Mengatur logo agar tetap responsif */
+@media (max-width: 768px) {
+  #about img {
+    width: 100%; /* Full width pada layar kecil */
+  }
+
+  #about h1 {
+    font-size: 2rem; /* Sesuaikan ukuran judul pada layar kecil */
+  }
+
+  #about h2 {
+    font-size: 0.9rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+}
+
+/* Services Section */
+#services {
+  padding-top: 100px;
+}
+.service-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item i {
+  color: #007bff;
+}
+
+.service-item p {
+  font-size: 0.8rem;
+}
+
+/* Advantages Section */
+/* Gaya tambahan, hanya menggunakan sedikit kustomisasi CSS */
+#advantages {
+  padding-top: 100px;
+}
+
+.advantages .card {
+  border-radius: 15px; /* Rounded corners for cards */
+}
+
+.advantages .card .icon i {
+  transition: color 0.3s ease;
+}
+
+.advantages .card:hover .icon i {
+  color: #1e3c72; /* Tetap warna biru saat hover */
+}
+
+.advantages img {
+  object-fit: cover; /* Pastikan gambar menyesuaikan ukuran container tanpa distorsi */
+}
+
+/* Contact Section */
+.contact {
+  padding-top: 100px;
+}
+
+.contact p,
+.contact a {
+  color: var(--font-color);
+  font-size: 18px;
+}
+
+/* Footer Style */
+/* Footer Style */
+footer {
+  background-color: #2d3e50;
+  color: white;
+  padding: 20px 0;
+  font-size: 1rem;
+}
