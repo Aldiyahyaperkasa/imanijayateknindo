@@ -1,48 +1,4 @@
-/* Reset padding dan margin pada body */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Pastikan body tidak ada scroll horizontal */
-body {
-  overflow-x: hidden;
-}
-
-/* Untuk elemen utama yang perlu menyesuaikan lebar */
-.container,
-.content {
-  width: 100%;
-  max-width: 100%; /* Pastikan tidak lebih besar dari layar */
-}
-
-/* Responsif untuk ukuran layar kecil */
-@media (max-width: 768px) {
-  .container,
-  .content {
-    padding: 15px; /* Atur padding agar tidak terlalu besar */
-  }
-}
-
-/* Pastikan elemen tidak meluas di luar layar */
-img,
-iframe,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Pastikan elemen flex atau grid menyesuaikan ukuran */
-.flex-container,
-.grid-container {
-  display: flex; /* atau grid jika menggunakan grid */
-  flex-wrap: wrap;
-  width: 100%;
-}
-
+/* Navbar Style */
 /* Navbar Style */
 .navbar {
   background-color: #2d3e50; /* Dark blue-gray */
@@ -149,9 +105,7 @@ video {
 }
 
 /* Services Section */
-#services {
-  padding-top: 100px;
-}
+
 .service-item {
   background-color: white;
   padding: 30px;
@@ -176,7 +130,7 @@ video {
 /* Advantages Section */
 /* Gaya tambahan, hanya menggunakan sedikit kustomisasi CSS */
 #advantages {
-  padding-top: 100px;
+  padding: 100px;
 }
 
 .advantages .card {
@@ -196,9 +150,6 @@ video {
 }
 
 /* Contact Section */
-.contact {
-  padding-top: 100px;
-}
 
 .contact p,
 .contact a {
