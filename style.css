@@ -1,16 +1,34 @@
-/* * {
-  outline: 1px solid red; 
-} */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scroll */
+  position: relative;
+  max-width: 100%;
 }
+
+section {
+  overflow-x: hidden; /* Pastikan setiap section tidak dapat di-scroll horizontal */
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    overflow-x: hidden;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap");
 
 /* Navbar Style */
 .navbar {
-  background-color: #2d3e50; /* Dark blue-gray */
+  background-color: #2d3e50;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -19,11 +37,7 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #f0ad4e; /* Change hover color to a golden shade */
-}
-
-.navbar-light .navbar-nav .nav-link.active {
-  color: #f0ad4e; /* Active link color */
+  color: #f0ad4e !important;
 }
 
 /* Home Section */
@@ -38,6 +52,8 @@ body {
   position: relative;
   align-items: center;
   overflow-x: hidden; /* Prevent any element in home section from overflowing */
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #home h1 {
@@ -63,7 +79,8 @@ body {
 }
 
 #home img {
-  max-width: 100%;
+  width: 100%; /* Ensures image takes the full width on mobile */
+  max-width: 100%; /* Prevents it from overflowing */
   height: auto;
   object-fit: cover;
   border-radius: 20px;
@@ -101,9 +118,21 @@ body {
 }
 
 #home .row {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-x: hidden; /* Prevent any overflow from rows */
 }
+
+@media (max-width: 576px) {
+  #home h1 {
+    font-size: 1.8rem; /* Smaller font for very small screens */
+  }
+
+  #home img {
+    width: 80%; /* Ensure the image fits smaller screens */
+  }
+}
+
 /* About Section */
 #about {
   background-color: #f4f4f4; /* Light gray background */
