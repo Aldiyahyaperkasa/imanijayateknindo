@@ -73,29 +73,31 @@
     </nav>
 
     <!-- Home Section -->
-    <section
-      id="home"
-      class="text-center"
-      style="
-        background: url('img/ai7.jpg') no-repeat center center fixed;
-        background-size: cover;
-        padding: 100px 0;
-        color: white;
-        position: relative;
-        height: 100vh; /* Menambahkan tinggi penuh layar */
-      "
-    >
-      <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">
-        <h1 class="display-4">
-          Mitra Terpercaya dalam Pengadaan Barang dan Jasa Berkualitas
-        </h1>
-        <p>
-          Solusi pengadaan barang dan jasa terbaik yang siap memenuhi kebutuhan
-          bisnis Anda.
-        </p>
-        <div class="cartoon-animation">
-          <!-- Tambahkan gambar kartun atau animasi disini -->
-          <img src="img/ai6.jpg" alt="Technician Cartoon" width="300px" />
+    <section id="home" class="home py-5 d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6" data-aos="fade-right">
+            <h1 class="">
+              Mitra Terpercaya dalam
+              <span class="text-light"
+                >Pengadaan Barang dan Jasa Berkualitas</span
+              >
+            </h1>
+            <p class="mt-3 text-light">
+              Solusi pengadaan barang dan jasa terbaik yang siap memenuhi
+              kebutuhan bisnis Anda.
+            </p>
+            <a href="#about" class="btn btn-primary mt-3"
+              >Pelajari Lebih Lanjut</a
+            >
+          </div>
+          <div class="col-md-6 text-center" data-aos="fade-left">
+            <img
+              src="img/home.jpeg"
+              alt="Company Image"
+              class="img-fluid rounded shadow w-50 text-center"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -104,11 +106,8 @@
     <section class="about" id="about">
       <div class="container mb-5">
         <div class="row justify-content-center pt-5 pb-5">
-          <div
-            class="about-image col-sm-12 col-md-6 col-lg-4"
-            data-aos="fade-right"
-          >
-            <div class="text-center">
+          <div class="col-sm-12 col-md-6 col-lg-4" data-aos="zoom-in">
+            <div class="about-image text-center">
               <img
                 src="img/logo.jpeg"
                 alt="Logo Imani Jaya Teknindo"
@@ -116,13 +115,12 @@
               />
             </div>
           </div>
-
-          <div class="col-sm-12 col-md-6 col-lg-8" data-aos="fade-left">
-            <h1>Tentang <span class="text-dark">Kami</span></h1>
-            <h2 class="text-primary" data-aos="fade-left" data-aos-delay="100">
+          <div class="col-sm-12 col-md-6 col-lg-8" data-aos="fade-up">
+            <h1 class="text-gradient">Tentang <span>Kami</span></h1>
+            <p class="subheading" data-aos="fade-left" data-aos-delay="100">
               Perusahaan Pengadaan Barang dan Jasa Konstruksi
-            </h2>
-            <p class="pt-3" data-aos="fade-left" data-aos-delay="200">
+            </p>
+            <p class="about-text" data-aos="fade-up" data-aos-delay="200">
               CV. Imani Jaya Teknindo adalah perusahaan yang bergerak di bidang
               pengadaan barang bangunan dan jasa konstruksi. Kami berfokus pada
               penyediaan produk berkualitas tinggi serta pelayanan terbaik untuk
@@ -132,6 +130,13 @@
               juga berusaha untuk selalu menjaga kualitas dan kepuasan pelanggan
               melalui layanan yang profesional dan terpercaya.
             </p>
+            <a
+              href="#services"
+              class="btn btn-primary mt-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              >Lihat Layanan Kami</a
+            >
           </div>
         </div>
       </div>
@@ -150,9 +155,11 @@
         </p>
 
         <div class="row mt-5">
-          <div class="col-md-6" data-aos="zoom-in">
+          <div class="col-md-6 mb-5" data-aos="zoom-in">
             <div class="service-item">
-              <i class="fas fa-box-open fa-5x text-primary"></i>
+              <div class="service-icon mb-3">
+                <i class="fas fa-box-open fa-5x"></i>
+              </div>
               <h3>Pengadaan Barang</h3>
               <p>
                 Kami menyediakan berbagai bahan bangunan berkualitas tinggi
@@ -165,7 +172,9 @@
           </div>
           <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="service-item">
-              <i class="fas fa-cogs fa-5x text-primary"></i>
+              <div class="service-icon mb-3">
+                <i class="fas fa-cogs fa-5x"></i>
+              </div>
               <h3>Jasa Pengelolaan Proyek</h3>
               <p>
                 Kami menangani berbagai jenis proyek konstruksi, mulai dari
@@ -346,7 +355,7 @@
                   href="https://wa.me/628123456789"
                   class="text-dark text-decoration-none"
                 >
-                  +62 812 3456 789
+                  +62 812 1231 2668
                 </a>
               </p>
             </div>
@@ -362,7 +371,7 @@
                 frameborder="0"
                 style="border: 0px"
                 allowfullscreen=""
-                class="border border-primary rounded"
+                class="border border-3 border-primary rounded"
               ></iframe>
             </div>
           </div>
@@ -371,9 +380,69 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-      <div class="container text-center">
-        <p>&copy; 2025 CV. Imani Jaya Teknindo. Semua hak cipta dilindungi.</p>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Kolom 1: Tentang Perusahaan -->
+          <div class="col-md-4 mb-4">
+            <h4 class="text-uppercase">Tentang Kami</h4>
+            <p>
+              CV. Imani Jaya Teknindo adalah perusahaan pengadaan barang dan
+              jasa konstruksi. Kami berkomitmen untuk memberikan pelayanan
+              terbaik dan produk berkualitas.
+            </p>
+          </div>
+
+          <!-- Kolom 2: Navigasi Singkat -->
+          <div class="col-md-4 mb-4">
+            <h4 class="text-uppercase">Navigasi</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#about" class="text-light text-decoration-none"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="text-light text-decoration-none"
+                  >Layanan</a
+                >
+              </li>
+              <li>
+                <a href="#projects" class="text-light text-decoration-none"
+                  >Proyek</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-light text-decoration-none"
+                  >Kontak Kami</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kolom 3: Kontak -->
+          <div class="col-md-4 mb-4">
+            <h4 class="text-uppercase">Kontak</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jalan Raya No. 123, Jakarta
+            </p>
+            <p><i class="fas fa-phone"></i> +62 812 1231 2668</p>
+            <p><i class="fas fa-envelope"></i> info@imanijayateknindo.com</p>
+          </div>
+        </div>
+
+        <!-- Garis Pembatas -->
+        <hr class="bg-light" />
+
+        <!-- Bagian Bawah Footer -->
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">
+              &copy; 2025 CV. Imani Jaya Teknindo. Semua hak cipta dilindungi.
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 

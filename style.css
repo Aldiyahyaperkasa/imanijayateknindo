@@ -1,6 +1,7 @@
-* {
-  /* outline: 1px solid red;  */
-}
+/* * {
+  outline: 1px solid red; 
+} */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap");
 
 /* Navbar Style */
 .navbar {
@@ -21,22 +22,20 @@
 }
 
 /* Home Section */
-#home {
-  padding: 100%;
-  height: 100vh;
-  background-size: cover;
-  color: white;
-  position: relative;
+#home h1 {
+  color: #11b2e3;
 }
-
-#home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.802), rgba(0, 0, 0, 0.774)),
+    url(img/bg-home2.jpg);
+  /* background-color: #1c334a; */
+  min-height: 100vh;
+  padding: 80px 0;
+  background-position: left center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  align-items: center;
 }
 
 #home h1 {
@@ -47,88 +46,209 @@
   font-size: 1.2rem;
 }
 
-.cartoon-animation {
-  margin-top: 50px;
+#home .btn-primary {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+#home .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#home img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 @media (max-width: 768px) {
+  #home {
+    padding: 50px 0;
+  }
+
   #home h1 {
     font-size: 2rem;
   }
 
-  #home p {
-    font-size: 1rem;
+  #home img {
+    margin-top: 30px;
   }
 }
 
 /* About Section */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap");
+
+/* About Section */
 #about {
-  padding-top: 100px;
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 50px 0;
 }
 
-#about img {
-  width: 80%; /* Mengatur ukuran logo agar lebih besar */
-  border-radius: 10px;
+#about .container {
+  background-color: #ffffff; /* White background for the content */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-#about .col-md-8 h1 {
-  letter-spacing: 0.3rem;
-  font-size: 3rem;
-}
-
-#about h2 {
-  font-size: 1rem; /* Meningkatkan ukuran font sedikit */
-  font-weight: 500;
+/* Heading Font: Poppins */
+#about h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
   letter-spacing: 0.1rem;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #333333;
 }
 
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  letter-spacing: 0.1rem;
+#about p.subheading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 0.05rem;
+  color: #0d6efd;
 }
 
-/* Mengatur logo agar tetap responsif */
+/* Paragraph Font: Roboto */
+#about p.about-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px;
+  letter-spacing: 0.05rem;
+  color: #121212;
+}
+
+#about .about-image img {
+  width: 80%;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Button */
+#about .btn-primary {
+  background: linear-gradient(20deg, #0a1657, #0d6efd);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+#about .btn-primary:hover {
+  background: linear-gradient(135deg, #ffffff00, #ffffff);
+  color: #000000;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  #about img {
-    width: 100%; /* Full width pada layar kecil */
-  }
-
   #about h1 {
-    font-size: 2rem; /* Sesuaikan ukuran judul pada layar kecil */
+    font-size: 2.5rem;
   }
 
-  #about h2 {
-    font-size: 0.9rem;
+  #about p.subheading {
+    font-size: 1.2rem;
   }
 
-  #about p {
+  #about p.about-text {
     font-size: 1rem;
+  }
+
+  #about .about-image img {
+    width: 100%;
   }
 }
 
 /* Services Section */
+#services {
+  background-color: #e9ecef; /* Warna latar belakang yang lebih modern */
+  padding: 100px 0;
+}
+
+#services h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d6efd; /* Warna teks utama */
+}
+
+#services p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 40px;
+}
 
 .service-item {
-  background-color: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  margin: 10px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Bayangan lebih kuat untuk efek modern */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  position: relative; /* Menambahkan positioning relative pada card */
+  overflow: visible; /* Membiarkan ikon yang keluar tetap terlihat */
 }
 
 .service-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px); /* Efek hover yang lebih dinamis */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.service-item i {
-  color: #007bff;
+.service-icon {
+  font-size: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #2a5298
+  ); /* Warna gradient ikon */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: -40px; /* Menggeser ikon ke atas sehingga setengahnya keluar */
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* Mengatur posisi ikon agar tetap berada di tengah card */
+}
+
+.service-item h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 60px; /* Memberikan jarak untuk menghindari tumpang tindih dengan ikon */
+  color: #0d6efd;
 }
 
 .service-item p {
-  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  #services h1 {
+    font-size: 2.5rem;
+  }
+
+  #services p {
+    font-size: 1rem;
+  }
+
+  .service-item {
+    margin-bottom: 30px;
+  }
 }
 
 /* Advantages Section */
@@ -161,7 +281,7 @@
   max-width: 100%;
 }
 
-.row {
+.advantages .row {
   margin-right: 0;
   margin-left: 0;
 }
@@ -185,10 +305,56 @@
 }
 
 /* Footer Style */
-/* Footer Style */
-footer {
-  background-color: #2d3e50;
-  color: white;
-  padding: 20px 0;
-  font-size: 1rem;
+/* Footer Styles */
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.802), rgba(0, 0, 0, 0.774)),
+    url(img/bg-home3.jpg);
+  color: #e5e7eb; /* Warna teks yang lebih terang */
+  padding: 80px 0;
+  background-position: left center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  align-items: center;
+}
+
+.footer h4 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.footer p,
+.footer a {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.footer a:hover {
+  color: #facc15; /* Warna kuning cerah saat di-hover */
+}
+
+.footer hr {
+  border-top: 1px solid #4b5563; /* Garis pemisah yang halus */
+  margin: 20px 0;
+}
+
+.footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+.footer i {
+  color: #facc15; /* Ikon berwarna kuning */
+  margin-right: 8px;
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .list-unstyled {
+    padding-left: 0;
+  }
 }
