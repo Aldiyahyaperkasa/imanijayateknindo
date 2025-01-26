@@ -1,6 +1,11 @@
 /* * {
   outline: 1px solid red; 
 } */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap");
 
 /* Navbar Style */
@@ -22,28 +27,28 @@
 }
 
 /* Home Section */
-#home h1 {
-  color: #11b2e3;
-}
 #home {
   background: linear-gradient(rgba(0, 0, 0, 0.802), rgba(0, 0, 0, 0.774)),
     url(img/bg-home2.jpg);
-  /* background-color: #1c334a; */
   min-height: 100vh;
   padding: 80px 0;
-  background-position: left center;
+  background-position: center center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   align-items: center;
+  overflow-x: hidden; /* Prevent any element in home section from overflowing */
 }
 
 #home h1 {
   font-size: 3rem;
+  color: #11b2e3;
+  font-weight: 700;
 }
 
 #home p {
   font-size: 1.2rem;
+  color: #f0f0f0;
 }
 
 #home .btn-primary {
@@ -62,26 +67,43 @@
   height: auto;
   object-fit: cover;
   border-radius: 20px;
+  display: block;
+  margin: 0 auto;
 }
 
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   #home {
     padding: 50px 0;
+    background-attachment: scroll; /* Disable fixed background on mobile */
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
   }
 
   #home h1 {
     font-size: 2rem;
+    text-align: center;
+  }
+
+  #home p {
+    font-size: 1rem;
+    text-align: center;
   }
 
   #home img {
+    width: 70%;
     margin-top: 30px;
+  }
+
+  #home .btn-primary {
+    display: block;
+    margin: 20px auto; /* Center button */
   }
 }
 
-/* About Section */
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap");
-
+#home .row {
+  padding: 0;
+  margin: 0;
+}
 /* About Section */
 #about {
   background-color: #f4f4f4; /* Light gray background */
@@ -182,7 +204,7 @@
 }
 
 #services p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: #333;
   margin-bottom: 40px;
@@ -230,7 +252,7 @@
 }
 
 .service-item p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: #555;
   margin-top: 15px;
@@ -253,10 +275,19 @@
 
 /* Advantages Section */
 #advantages {
-  /* padding: 100px; */
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
+#advantages h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d6efd; /* Warna teks utama */
+}
+.advantages p {
+  font-family: "Roboto", sans-serif;
+}
 @media (min-width: 768px) {
   #advantages {
     padding: 100px;
@@ -279,6 +310,13 @@
 .advantages .card {
   width: 100%;
   max-width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantages .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .advantages .row {
@@ -298,10 +336,63 @@
 }
 
 /* Contact Section */
+/* Font and General Styles */
 .contact p,
 .contact a {
   color: var(--font-color);
   font-size: 18px;
+  font-family: "Roboto", sans-serif; /* Change font */
+  font-weight: 500;
+}
+
+/* Contact Section */
+#contact {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+
+#contact h2 {
+  font-family: "poppins", sans-serif; /* Bold font for heading */
+  font-weight: 700;
+  font-size: 3rem;
+  color: #1e3c72;
+}
+
+#contact h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+/* Adjusting the Map iframe */
+.map-iframe iframe {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.map-iframe iframe:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 60px 20px;
+  }
+
+  #contact h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .cont-details {
+    margin-top: 20px;
+  }
+
+  .map-content-9 {
+    margin-top: 20px;
+  }
 }
 
 /* Footer Style */
@@ -330,10 +421,6 @@
   font-size: 0.95rem;
 }
 
-.footer a:hover {
-  color: #facc15; /* Warna kuning cerah saat di-hover */
-}
-
 .footer hr {
   border-top: 1px solid #4b5563; /* Garis pemisah yang halus */
   margin: 20px 0;
@@ -344,7 +431,7 @@
 }
 
 .footer i {
-  color: #facc15; /* Ikon berwarna kuning */
+  color: #0d6efd;
   margin-right: 8px;
 }
 
