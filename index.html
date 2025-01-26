@@ -29,32 +29,49 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-danger">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top"
+      style="background-color: #2d3e50"
+    >
       <div class="container">
+        <a class="navbar-brand text-white" href="#">Imani Jaya Teknindo</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto fs-5 fw-bold">
-            <a class="nav-link" aria-current="page" href="#dashboard">Home</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#resume">Resume</a>
-            <a class="nav-link" href="#gallery">Gallery</a>
-            <a class="nav-link" href="#contact">Contact</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#services">Layanan Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#advantages">Keunggulan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#partners">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Kontak</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Home Section -->
     <!-- Home Section -->
     <section
       id="home"
@@ -102,10 +119,10 @@
 
           <div class="col-sm-12 col-md-6 col-lg-8" data-aos="fade-left">
             <h1>Tentang <span class="text-dark">Kami</span></h1>
-            <h2 class="text-primary">
+            <h2 class="text-primary" data-aos="fade-left" data-aos-delay="100">
               Perusahaan Pengadaan Barang dan Jasa Konstruksi
             </h2>
-            <p class="pt-3">
+            <p class="pt-3" data-aos="fade-left" data-aos-delay="200">
               CV. Imani Jaya Teknindo adalah perusahaan yang bergerak di bidang
               pengadaan barang bangunan dan jasa konstruksi. Kami berfokus pada
               penyediaan produk berkualitas tinggi serta pelayanan terbaik untuk
@@ -173,7 +190,7 @@
           Menawarkan solusi terbaik dengan pengalaman dan kualitas yang tak
           tertandingi.
         </p>
-        <div class="row justify-content-center">
+        <div class="row">
           <div class="col-md-7" data-aos="fade-left">
             <div class="row">
               <div class="col-md-6 col-lg-6 mb-3" data-aos="fade-up">
@@ -266,7 +283,7 @@
             data-aos="fade-right"
           >
             <img
-              src="img/ai8.jpg"
+              src="img/advantegs-image.jpeg"
               alt="Proyek Konstruksi"
               class="img-fluid rounded shadow"
               style="max-height: 400px; object-fit: cover"
@@ -288,15 +305,15 @@
         </div>
         <div class="row">
           <!-- Sisi Kiri: Detail Kontak -->
-          <div class="col-md-6 cont-details" data-aos="fade-right">
+          <div class="col-md-6 cont-details">
             <!-- Alamat Kontak -->
-            <div class="mb-4">
+            <div class="mb-4" data-aos="fade-right">
               <h4 class="text-primary">Alamat</h4>
               <p>Jalan Raya No. 123, Jakarta, Indonesia</p>
             </div>
 
             <!-- Kontak Email -->
-            <div class="mb-4">
+            <div class="mb-4" data-aos="fade-right" data-aos-delay="50">
               <h4 class="text-primary">Email Saya</h4>
               <p>
                 <a
@@ -309,7 +326,7 @@
             </div>
 
             <!-- Kontak Email -->
-            <div class="mb-4">
+            <div class="mb-4" data-aos="fade-right" data-aos-delay="100">
               <h4 class="text-primary">Telepon</h4>
               <p>
                 <a
@@ -322,7 +339,7 @@
             </div>
 
             <!-- Kontak WhatsApp -->
-            <div class="mb-4">
+            <div class="mb-4" data-aos="fade-right" data-aos-delay="150">
               <h4 class="text-primary">WhatsApp</h4>
               <p>
                 <a

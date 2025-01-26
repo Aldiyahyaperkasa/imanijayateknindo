@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red; /* Menambahkan outline merah pada setiap elemen */
+  /* outline: 1px solid red;  */
 }
 
 /* Navbar Style */
@@ -132,13 +132,15 @@
 }
 
 /* Advantages Section */
-/* Gaya tambahan, hanya menggunakan sedikit kustomisasi CSS */
 #advantages {
-  padding: 100px;
+  /* padding: 100px; */
+  overflow-x: hidden;
 }
 
-.advantages .card {
-  border-radius: 15px; /* Rounded corners for cards */
+@media (min-width: 768px) {
+  #advantages {
+    padding: 100px;
+  }
 }
 
 .advantages .card .icon i {
@@ -146,15 +148,36 @@
 }
 
 .advantages .card:hover .icon i {
-  color: #1e3c72; /* Tetap warna biru saat hover */
+  color: #1e3c72;
 }
 
 .advantages img {
-  object-fit: cover; /* Pastikan gambar menyesuaikan ukuran container tanpa distorsi */
+  max-width: 100%;
+  height: auto;
+}
+
+.advantages .card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .advantages .card {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .advantages img {
+    max-height: 250px;
+  }
 }
 
 /* Contact Section */
-
 .contact p,
 .contact a {
   color: var(--font-color);
